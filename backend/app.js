@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB using Mongoose
-mongoose.connect("mongodb://localhost:27017/CSE341", {
+mongoose.connect("mongodb+srv://admin:Admin123@cluster0.gt4srvz.mongodb.net/?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -97,7 +97,7 @@ app.delete("/items/:id", async (req, res) => {
 });
 
 // Set up the server to listen on port 3000
-const PORT = 3000;
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
